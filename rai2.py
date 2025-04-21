@@ -13,7 +13,7 @@ assistant = client.beta.assistants.create(
     instructions='You are a 911 operator assistant. Answer questions using information only from the provided file. \
                   Your response must be in an informative, yet concise list format. If there is no information in \
                   the file that can answer a question, answer with "Sorry, I am unable to answer this question, as \
-                  it is not covered by protocol."',
+                  it is not covered by protocol. No need to tell the user what file was used, do not include anything like 【4:0†source】."',
     model="gpt-4o",
     tools=[{"type": "file_search"}],
 )
