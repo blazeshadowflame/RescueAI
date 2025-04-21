@@ -20,11 +20,23 @@ assistant = client.beta.assistants.create(
 
 # Create vector store + upload docs
 vector_store = client.vector_stores.create(name="911 Operator Protocol")
-file_paths = [
-    "c:\\Users\\leonn\\Prototype4\\RescueAI_Synthetic_911_Scenarios.pdf",
-    "c:\\Users\\leonn\\Prototype4\\RescueAI_Traffic_Accidents dialogue transcript.pdf"
+
+import requests
+from io import BytesIO
+
+pdf_urls = [
+    "https://raw.githubusercontent.com/blazeshadowflame/testdeploy/main/RescueAI_Traffic_Accidents%20dialogue%20transcript.pdf",
+    "https://raw.githubusercontent.com/blazeshadowflame/testdeploy/main/RescueAI_Synthetic_911_Scenarios.pdf"
 ]
-file_streams = [open(path, "rb") for path in file_paths]
+
+file_streams = []
+for url in pdf_urls:
+    response = requests.get(url)
+    response.raise_for_status()
+    filename = url.split("/")[-1]
+    file_streams.append((filename, BytesIO(response.content), "application/pdf"))
+
+
 client.vector_stores.file_batches.upload_and_poll(vector_store_id=vector_store.id, files=file_streams)
 
 # Attach vector store to assistant
@@ -114,7 +126,7 @@ st.title("📞 Emergency Audio Transcription")
 st.markdown(
     """
     <div class="description-text">
-    <strong style="color:#ffd700;">Upload or record your 911 call audio below.</strong><br>
+    <strong style="color:#ffd700;">Record your 911 call audio below.</strong><br>
     The system will transcribe the message and highlight important keywords to assist emergency responders.
     </div>
     """,
