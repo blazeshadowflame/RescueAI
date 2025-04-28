@@ -197,6 +197,8 @@ with st.sidebar:
     if user_input:
         st.session_state.chat_messages.append({"role": "user", "content": user_input})
         with st.spinner("Rai is thinking..."):
-            response = assistant_chatbot(user_input)
-        st.session_state.chat_messages.append({"role": "assistant", "content": response})
+            raw_response = assistant_chatbot(user_input)
+            clean_response = clean_recommendation(raw_response)  # 🛠️ Clean it here!
+        st.session_state.chat_messages.append({"role": "assistant", "content": clean_response})
         st.rerun()
+
