@@ -57,7 +57,7 @@ Action Recommendation System: Based on extracted keywords, the tool suggests imm
 The tool was designed with usability in mind to ensure minimal disruption to existing operator workflows. In the future, we plan to expand the system with additional features such as multi-language support, integration with dispatch software, and AI-driven urgency assessment.
 
 ## See Our Demo Video
-[![Watch the video]()](https://www.youtube.com/watch?v=8WYtjIdxLEk) 
+[![Watch the video](demovid_icon.png)](https://www.youtube.com/watch?v=8WYtjIdxLEk) 
 
 <!--
 [![IMAGE ALT TEXT HERE](/CASExplorer.png)](https://youtu.be/Sa3w50Kn6TY)
