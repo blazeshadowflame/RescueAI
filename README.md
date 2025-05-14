@@ -9,14 +9,14 @@
 
 ## Overview
 
-Chatbot that assists college students 24/7 in exploring STEM majors and careers, so they can be more confident in their decisions. 
+We built an AI tool that captures live 911 call audio, transcribes it in real time (with editable corrections), extracts critical keywords, and recommends actionable next steps for operators. Using Whisper for transcription and ChatGPT-4.0 for decision support, the tool reduces operator workload, speeds up emergency response, and enhances the quality of care provided to callers.
 
 ## RescueAI: What is it?
 
-The **“C-A-S”** part of our virtual assistant name stands for the various sections provided in our virtual assistants for students to explore: **C**areer, **A**cademic, and **S**elf exploration. The terms CASE and Explorer stem from how an individual, a case, will explore the different aspects within our chatbot. There could be many different ways students can navigate the virtual assistant for their own needs, hence the name CASExplorer.
+RescueAI is an AI-powered tool that assists emergency call operators by providing real-time transcription, keyword extraction, and recommended action steps during 911 calls, helping streamline data entry and improve response effectiveness under high-pressure conditions.
 
 
-## Why CASExplorer? 
+## Why RescueAI? 
 
 Emergency response systems, particularly 911 call centers, face enormous pressure as operators must simultaneously listen, transcribe, analyze, and provide life-saving instructions — often with limited support and high workloads. Manual data entry during live calls can slow down response times and increase the risk of missing critical information. Current software solutions mainly focus on recording calls or providing basic transcription services but do little to actively assist operators in decision-making during live situations.
 
